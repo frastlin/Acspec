@@ -27,6 +27,7 @@ const Layout = ({ children, location }) => {
 			site {
 				siteMetadata {
 					title
+					author
 				}
 			}
 			allMdx {
@@ -56,7 +57,7 @@ const Layout = ({ children, location }) => {
 			{seoTitle}
 				<main>{children}</main>
 				<footer>
-					© {new Date().getFullYear()}, SBES, Inc.
+					© {new Date().getFullYear()}, {data.site.siteMetadata.author}
 				</footer>
 			</div>
 		</MDXProvider>
